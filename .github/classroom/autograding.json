@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "InsertionSort::Sort",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"InsertionSort::Sort\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "Partition::MedianOfThree",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Partition::MedianOfThree\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Partition::Partition",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Partition::Partition\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "QuickSort::Sort",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"QuickSort::Sort\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 5
+    },
+    {
+      "name": "Merging::Merge",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"Merging::Merge\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "MergeSort::Sort",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"MergeSort::Sort\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 5
+    },
+    {
+      "name": "HeapSort::BuildMaxHeap",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"HeapSort::BuildMaxHeap\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 2
+    },
+    {
+      "name": "HeapSort::Sort",
+      "setup": "",
+      "run": "ctest -VVV --output-on-failure --test-dir build -R \"HeapSort::Sort\"",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 5
+    }
+  ]
+}
