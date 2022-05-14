@@ -19,12 +19,31 @@ namespace assignment {
 
     // вычисляем индекс середины заданной области
     const int middle = middle_of(start, stop);
-
+    int median;
     // поиск медианы среди трех элементов по индексам start, middle и stop
-
-    // Здесь должна быть ваша реализация ...
-
-    return -1 /* здесь что-то не так ... */;
+    if (arr[start] > arr[middle]){
+      if (arr[start] < arr[stop]){
+        median = start;
+      }
+      else if (arr[stop] < arr[middle]){
+        median = middle;
+      }
+      else{
+        median = stop;
+      }
+    }
+    else{ // arr[start] <= arr[middle]
+      if (arr[start] > arr[stop]){
+        median = start;
+      }
+      else if (arr[middle] > arr[stop]){
+        median = stop;
+      }
+      else{
+        median = middle;
+      }
+    }
+    return median;
   }
 
   int partition(std::vector<int>& arr, int start, int stop, int pivot) {
@@ -32,7 +51,7 @@ namespace assignment {
     assert(!arr.empty() && start >= 0 && stop < arr.size() && start <= stop);
 
     // Tips:
-    // 1. Переместите опорный элемент в конец области (потом вернем на нужно место)
+    // 1. Переместите опорный элемент в конец области (потом вернем на нужное место)
     // 2. Заведите переменную "индекс опорного элемента" = начало области (он будет обновляться)
     // 3. Пройдитесь в цикле по всем индексам (конец исключительно) и произведите разбиение,
     //    передвигая "индекс опорного элемента" в определенных случая вправо.
@@ -52,7 +71,8 @@ namespace assignment {
     for (int index = start; index < stop; index++) {
 
       if (arr[index] < pivot_value) {
-        // Напишите здесь ваш код ...
+       std:: swap(arr[index], arr[curr_pivot_index]);
+       curr_pivot_index++;
       }
     }
 
@@ -60,7 +80,7 @@ namespace assignment {
     std::swap(arr[curr_pivot_index], arr[stop]);
 
     // возвращаем индекс опорного элемента
-    return -1 /* здесь что-то не так ... */;
+    return curr_pivot_index;
   }
 
 }  // namespace assignment
