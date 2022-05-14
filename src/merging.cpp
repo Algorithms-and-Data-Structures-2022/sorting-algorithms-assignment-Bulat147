@@ -13,7 +13,7 @@ namespace assignment {
     int right_offset = middle + 1;
 
     // индекс текущей позиции буфера (туда будут сливаться подмассивы)
-    int buf_offset = 0;
+    int buf_offset = start;
 
     // слияния подмассивов (пока не достигли конца одного из подмассивов)
     while (left_offset <= middle && right_offset <= stop) {
@@ -37,13 +37,15 @@ namespace assignment {
     }
 
     // реализуйте сливание остатков правого подмассива ...
-    for (int right_os = right_offset; right_os <= middle; right_os++) {
+    for (int right_os = right_offset; right_os <= stop; right_os++) {
       buf[buf_offset] = arr[right_os];
       buf_offset += 1;
     }
 
     // копируем результат слияния подмассивов из буфера в оригинальный массив ... std::copy или цикл for ...
-    std::copy(arr[0], arr[stop], buf);
+    for (int i = start; i <= stop; i++){
+      arr[i] = buf[i];
+    }
   }
 
 }  // namespace assignment

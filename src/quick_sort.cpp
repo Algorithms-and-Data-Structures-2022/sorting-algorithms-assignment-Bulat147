@@ -23,7 +23,7 @@ namespace assignment {
     int piv_index = partition(arr, start, stop, pivot_index);
     // рекурсивно повторяем процедуру над левой и правой частью ...
     quick_sort(arr, start, piv_index-1);
-    quick_sort(arr, pivot_index+1, stop);
+    quick_sort(arr, piv_index+1, stop);
   }
 
 }  // namespace assignment
